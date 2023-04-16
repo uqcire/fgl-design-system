@@ -8,6 +8,7 @@
     "preview": "vite preview",
     "lint": "eslint --fix --ext .js,.vue .",
     "lint:fix": "eslint . --fix",
+    "lint:staged": "lint-staged",
     "cz": "cz"
   },
   "dependencies": {
