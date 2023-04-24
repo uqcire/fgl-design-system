@@ -7,4 +7,12 @@ export const Routes = [
       title: 'Homepage',
     },
   },
+  {
+    path: '/design-system',
+    name: 'design-system',
+    component: () => import('@/views/design-system/index.vue'),
+    meta: {
+      title: 'Design System',
+    },
+  },
 ]
