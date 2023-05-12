@@ -1,18 +1,25 @@
+// import Layout from '@/layout/index.vue'
+import Home from '@/views/Homepage.vue'
+import ErrorPage from '@/views/404/index.vue'
+
 export const Routes = [
   {
     path: '/',
-    name: 'home',
-    component: () => import('@/views/Homepage.vue'),
-    meta: {
-      title: 'Homepage',
-    },
+    component: Home,
+    redirect: '/dashboard',
+    children: [
+      {
+        path: 'dashboard',
+        name: 'Dashboard',
+        component: () => import('@/views/dashboard/index.vue'),
+        meta: {
+          title: 'Dashboard',
+        },
+      },
+    ],
   },
   {
-    path: '/design-system',
-    name: 'design-system',
-    component: () => import('@/views/design-system/index.vue'),
-    meta: {
-      title: 'Design System',
-    },
+    path: '/:pathMatch(.*)*',
+    component: ErrorPage,
   },
 ]
