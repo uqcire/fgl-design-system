@@ -1,18 +1,29 @@
 <script setup>
-const { replace } = useRouter()
+import Layout from '@/layout/index.vue'
 </script>
 
 <template>
-  <AppPage>
-    <n-result m-auto status="404" description="抱歉，您访问的页面不存在。">
-      <template #icon>
-        <img src="@/assets/images/404.webp" width="500">
-      </template>
-      <template #footer>
-        <n-button @click="replace('/')">
-          返回首页
+  <Layout>
+    <template #header>
+      <div class="text-2xl">
+        404
+      </div>
+    </template>
+    <template #sider>
+      <div>sider</div>
+    </template>
+    <template #content>
+      <n-space vertical align="center">
+        <h2 class="my-1">
+          404 - Page not found!
+        </h2>
+        <img src="@/assets/img/404.svg" class="mb-2 h-auto w-[640px]">
+        <n-button type="info" size="large">
+          <router-link to="/">
+            Go back
+          </router-link>
         </n-button>
-      </template>
-    </n-result>
-  </AppPage>
+      </n-space>
+    </template>
+  </layout>
 </template>
