@@ -16,3 +16,5 @@ import Layout from '@/layout/index.vue'
     </template>
   </Layout>
 </template>
+
+duFYG&5DC@1%1Bb8
